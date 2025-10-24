@@ -11,8 +11,8 @@ const galleryImages = [
   { id: 2, src: "/images/product/product-02.jpg", alt: "Brand photography campaign", category: "Product" },
   { id: 3, src: "/images/product/product-03.jpg", alt: "Advertising photography", category: "Product" },
   { id: 4, src: "/images/product/product-04.jpg", alt: "E-commerce product images", category: "Product" },
-  { id: 5, src: "/images/product/product-05.jpg", alt: "Commercial still life", category: "Product" },
-  { id: 6, src: "/images/product/product-06.jpg", alt: "Lifestyle brand photography", category: "Product" },
+  { id: 5, src: "/images/product/product-05.JPG", alt: "Commercial still life", category: "Product" },
+  { id: 6, src: "/images/product/product-06.JPG", alt: "Lifestyle brand photography", category: "Product" },
   { id: 7, src: "/images/product/product-07.JPG", alt: "Food product advertising", category: "Product" },
   { id: 8, src: "/images/product/product-08.png", alt: "Product catalog photography", category: "Product" },
 
