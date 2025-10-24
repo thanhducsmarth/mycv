@@ -20,35 +20,19 @@ const galleryImages = [
   { id: 9, src: "/images/wedding/wedding-01.jpg", alt: "Wedding ceremony details", category: "Wedding" },
   { id: 10, src: "/images/wedding/wedding-02.jpg", alt: "Bridal portrait session", category: "Wedding" },
   { id: 11, src: "/images/wedding/wedding-03.jpg", alt: "Wedding reception moments", category: "Wedding" },
-  { id: 12, src: "/images/wedding/wedding-04.jpg", alt: "Couple wedding portraits", category: "Wedding" },
-  { id: 13, src: "/images/wedding/wedding-05.jpg", alt: "Wedding venue photography", category: "Wedding" },
 
   // Studio Category - Portrait/Studio photography
   { id: 14, src: "/images/studio/studio-01.png", alt: "Professional headshot", category: "Studio" },
   { id: 15, src: "/images/studio/studio-02.png", alt: "Portrait session", category: "Studio" },
-  { id: 16, src: "/images/studio/studio-03.jpg", alt: "Corporate headshots", category: "Studio" },
-  { id: 17, src: "/images/studio/studio-04.jpg", alt: "Studio portrait with lighting", category: "Studio" },
-  { id: 18, src: "/images/studio/studio-05.jpg", alt: "Creative studio photography", category: "Studio" },
-  { id: 19, src: "/images/studio/studio-06.jpg", alt: "Professional portrait", category: "Studio" },
-
-  // Event Category - Corporate/Event photography
-  { id: 20, src: "/images/event/event-01.jpg", alt: "Corporate conference photography", category: "Event" },
-  { id: 21, src: "/images/event/event-02.jpg", alt: "Event party celebration", category: "Event" },
-  { id: 22, src: "/images/event/event-03.jpg", alt: "Team building photography", category: "Event" },
-  { id: 23, src: "/images/event/event-04.jpg", alt: "Product launch event", category: "Event" },
-  { id: 24, src: "/images/event/event-05.jpg", alt: "Company celebration", category: "Event" },
-  { id: 25, src: "/images/event/event-06.jpg", alt: "Network event photography", category: "Event" },
 
   // Birthday Category - Birthday photography
-  { id: 26, src: "/images/birthday/birthday-01.jpg", alt: "Birthday party celebration", category: "Birthday" },
-  { id: 27, src: "/images/birthday/birthday-02.jpg", alt: "Birthday cake cutting moment", category: "Birthday" },
-  { id: 28, src: "/images/birthday/birthday-03.jpg", alt: "Family birthday gathering", category: "Birthday" },
-  { id: 29, src: "/images/birthday/birthday-04.jpg", alt: "Birthday decorations and setup", category: "Birthday" },
-  { id: 30, src: "/images/birthday/birthday-05.jpg", alt: "Birthday surprise moments", category: "Birthday" },
-  { id: 31, src: "/images/birthday/birthday-06.jpg", alt: "Birthday party atmosphere", category: "Birthday" },
+  { id: 16, src: "/images/birthday/birthday-01.jpg", alt: "Birthday party celebration", category: "Birthday" },
+  { id: 17, src: "/images/birthday/birthday-02.jpg", alt: "Birthday cake cutting moment", category: "Birthday" },
+  { id: 18, src: "/images/birthday/birthday-03.jpg", alt: "Family birthday gathering", category: "Birthday" },
+  { id: 19, src: "/images/birthday/birthday-04.jpg", alt: "Birthday decorations and setup", category: "Birthday" },
 ];
 
-const categories = ["All", "Product", "Wedding", "Studio", "Event", "Birthday"];
+const categories = ["All", "Product", "Wedding", "Studio"];
 
 // Contact Form Component
 function ContactForm() {
