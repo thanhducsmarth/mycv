@@ -1,26 +1,132 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Professional Photography Color Palette */
+  --color-charcoal: #1a1a1a;
+  --color-slate: #374151;
+  --color-warm-gray: #6b7280;
+  --color-stone: #9ca3af;
+  --color-light-gray: #e5e7eb;
+  --color-cream: #fafafa;
+  --color-gold: #d4af37;
+  --color-bronze: #cd7f32;
+  --color-accent: #7c3aed;
+
+  /* Typography */
+  --font-inter: var(--font-inter);
+  --font-playfair: var(--font-playfair);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+
+  /* Professional Color Scale */
+  --color-neutral-50: #fafafa;
+  --color-neutral-100: #f4f4f5;
+  --color-neutral-200: #e4e4e7;
+  --color-neutral-300: #d4d4d8;
+  --color-neutral-400: #a1a1aa;
+  --color-neutral-500: #71717a;
+  --color-neutral-600: #52525b;
+  --color-neutral-700: #3f3f46;
+  --color-neutral-800: #27272a;
+  --color-neutral-900: #1a1a1a;
+  --color-neutral-950: #0a0a0a;
+
+  /* Professional Photography Colors */
+  --color-professional: #1a1a1a;
+  --color-premium: #374151;
+  --color-elegant: #6b7280;
+  --color-refined: #9ca3af;
+  --color-luxury: #d4af37;
+  --color-signature: #7c3aed;
+
+  /* Spacing Scale */
+  --space-px: 1px;
+  --space-0_5: 0.125rem;
+  --space-1: 0.25rem;
+  --space-1_5: 0.375rem;
+  --space-2: 0.5rem;
+  --space-2_5: 0.625rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Professional typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-charcoal);
+}
+
+/* Custom utilities for professional design */
+.pro-shadow {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.pro-shadow-lg {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.pro-gradient {
+  background: linear-gradient(135deg, var(--color-luxury) 0%, var(--color-bronze) 100%);
+}
+
+.pro-text-gradient {
+  background: linear-gradient(135deg, var(--color-charcoal) 0%, var(--color-slate) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.name-highlight {
+  background: linear-gradient(135deg, #d4af37 0%, #f5c518 50%, #b8860b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5))
+          drop-shadow(0 0 20px rgba(212, 175, 55, 0.3))
+          drop-shadow(0 0 30px rgba(212, 175, 55, 0.2));
+  animation: nameGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes nameGlow {
+  0% {
+    filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5))
+            drop-shadow(0 0 20px rgba(212, 175, 55, 0.3))
+            drop-shadow(0 0 30px rgba(212, 175, 55, 0.2));
+  }
+  100% {
+    filter: drop-shadow(0 0 15px rgba(245, 193, 24, 0.7))
+            drop-shadow(0 0 25px rgba(245, 193, 24, 0.5))
+            drop-shadow(0 0 40px rgba(245, 193, 24, 0.3));
+  }
 }
