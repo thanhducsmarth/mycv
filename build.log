@@ -1,0 +1,33 @@
+
+> thanhducphoto@0.1.0 build
+> next build --turbopack
+
+   ▲ Next.js 15.5.6 (Turbopack)
+   - Environments: .env.local
+
+   Creating an optimized production build ...
+ ✓ Finished writing to disk in 24ms
+ ✓ Compiled successfully in 4.0s
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/5) ...
+   Generating static pages (1/5) 
+   Generating static pages (2/5) 
+   Generating static pages (3/5) 
+ ✓ Generating static pages (5/5)
+   Finalizing page optimization ...
+   Collecting build traces ...
+   Exporting (0/2) ...
+ ✓ Exporting (2/2)
+
+Route (app)                         Size  First Load JS
+┌ ○ /                            21.7 kB         135 kB
+└ ○ /_not-found                      0 B         113 kB
++ First Load JS shared by all     121 kB
+  ├ chunks/8b0bb0ec21c958b1.js   75.4 kB
+  └ chunks/ea7ab0dba7b47d7c.js   20.5 kB
+  └ other shared chunks (total)  25.2 kB
+
+
+○  (Static)  prerendered as static content
+
