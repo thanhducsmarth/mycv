@@ -30,9 +30,15 @@ const galleryImages = [
   { id: 17, src: "/images/birthday/birthday-02.jpg", alt: "Birthday cake cutting moment", category: "Birthday" },
   { id: 18, src: "/images/birthday/birthday-03.jpg", alt: "Family birthday gathering", category: "Birthday" },
   { id: 19, src: "/images/birthday/birthday-04.jpg", alt: "Birthday decorations and setup", category: "Birthday" },
+
+  // Event Category - Event photography
+  { id: 20, src: "/images/event/event-01.jpg", alt: "Corporate event crowd gathering", category: "Event" },
+  { id: 21, src: "/images/event/event-02.jpg", alt: "Conference presentation moment", category: "Event" },
+  { id: 22, src: "/images/event/event-03.jpg", alt: "Party celebration atmosphere", category: "Event" },
+  { id: 23, src: "/images/event/event-04.jpg", alt: "Networking reception activities", category: "Event" },
 ];
 
-const categories = ["All", "Product", "Wedding", "Studio"];
+const categories = ["All", "Product", "Wedding", "Studio", "Event"];
 
 // Contact Form Component
 function ContactForm() {
