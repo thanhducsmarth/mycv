@@ -24,6 +24,8 @@ const galleryImages = [
   // Studio Category - Portrait/Studio photography
   { id: 14, src: "/images/studio/studio-01.png", alt: "Professional headshot", category: "Studio" },
   { id: 15, src: "/images/studio/studio-02.png", alt: "Portrait session", category: "Studio" },
+  { id: 12, src: "/images/studio/studio-03.jpg", alt: "Artistic portrait photography", category: "Studio" },
+  { id: 13, src: "/images/studio/studio-04.jpg", alt: "Studio lighting portrait", category: "Studio" },
 
   // Birthday Category - Birthday photography
   { id: 16, src: "/images/birthday/birthday-01.jpg", alt: "Birthday party celebration", category: "Birthday" },
@@ -299,12 +301,6 @@ export default function Home() {
                 I work across various genres including portrait, wedding, event, and commercial photography,
                 always striving to exceed client expectations and deliver breathtaking results that resonate emotionally.
               </p>
-              <div className="flex flex-wrap justify-center gap-4 mt-8">
-                <span className="bg-white px-4 py-2 rounded-full text-sm font-medium border border-gray-200">Portrait</span>
-                <span className="bg-white px-4 py-2 rounded-full text-sm font-medium border border-gray-200">Wedding</span>
-                <span className="bg-white px-4 py-2 rounded-full text-sm font-medium border border-gray-200">Event</span>
-                <span className="bg-white px-4 py-2 rounded-full text-sm font-medium border border-gray-200">Birthday</span>
-              </div>
             </div>
             <div className="relative">
               <Image
