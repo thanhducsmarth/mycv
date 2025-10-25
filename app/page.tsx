@@ -304,7 +304,7 @@ export default function Home() {
             </div>
             <div className="relative">
               <Image
-                src="https://picsum.photos/600/800?random=portrait"
+                src="/images/about-profile.png"
                 alt="Thanh Duc - Professional Photographer"
                 width={600}
                 height={800}
