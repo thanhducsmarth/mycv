@@ -44,56 +44,13 @@ const categories = ["All", "Product", "Wedding", "Studio", "Event"];
 
 // Contact Form Component
 function ContactForm() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    service: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitMessage, setSubmitMessage] = useState('');
-  const [submitError, setSubmitError] = useState('');
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitError('');
-    setSubmitMessage('');
-
-    try {
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        setSubmitMessage('Thank you! Your message has been sent successfully. I will get back to you soon.');
-        setFormData({ name: '', email: '', service: '', message: '' });
-      } else {
-        setSubmitError(data.error || 'Sorry, there was an error sending your message. Please try again.');
-      }
-    } catch (error) {
-      setSubmitError('Network error. Please check your connection and try again.');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form
+      action="mailto:thanhduckrb767@gmail.com"
+      method="POST"
+      encType="text/plain"
+      className="space-y-6"
+    >
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">Name *</label>
         <input
@@ -101,8 +58,6 @@ function ContactForm() {
           id="name"
           name="name"
           required
-          value={formData.name}
-          onChange={handleChange}
           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-gray-900 transition-colors"
           placeholder="Your full name"
         />
@@ -115,8 +70,6 @@ function ContactForm() {
           id="email"
           name="email"
           required
-          value={formData.email}
-          onChange={handleChange}
           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-gray-900 transition-colors"
           placeholder="your.email@example.com"
         />
@@ -127,8 +80,6 @@ function ContactForm() {
         <select
           id="service"
           name="service"
-          value={formData.service}
-          onChange={handleChange}
           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-gray-900 transition-colors"
         >
           <option value="">Select a service</option>
@@ -148,35 +99,16 @@ function ContactForm() {
           name="message"
           required
           rows={4}
-          value={formData.message}
-          onChange={handleChange}
           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-gray-900 transition-colors"
           placeholder="Tell me about your photography needs..."
         />
       </div>
 
-      {submitError && (
-        <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
-          {submitError}
-        </div>
-      )}
-
-      {submitMessage && (
-        <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg">
-          {submitMessage}
-        </div>
-      )}
-
       <button
         type="submit"
-        disabled={isSubmitting}
-        className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors duration-300 ${
-          isSubmitting
-            ? 'bg-gray-400 text-gray-200 cursor-not-allowed'
-            : 'bg-gray-900 text-white hover:bg-gray-800'
-        }`}
+        className="w-full py-3 px-6 rounded-lg font-semibold bg-gray-900 text-white hover:bg-gray-800 transition-colors duration-300"
       >
-        {isSubmitting ? 'Sending...' : 'Send Message'}
+        Send Message
       </button>
     </form>
   );
