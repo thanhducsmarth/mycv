@@ -28,7 +28,9 @@ function* walkSync(dir) {
 async function optimizeImage(inputPath, outputPath) {
   try {
     const relativePath = path.relative(inputDir, inputPath);
-    const output = path.join(outputDir, relativePath);
+    // Change extension to .webp
+    const webpRelativePath = relativePath.replace(/\.(jpg|jpeg|png)$/i, '.webp');
+    const output = path.join(outputDir, webpRelativePath);
 
     // Ensure output subdir exists
     const outDir = path.dirname(output);
@@ -39,20 +41,18 @@ async function optimizeImage(inputPath, outputPath) {
     console.log(`Optimizing ${inputPath} -> ${output}`);
 
     await sharp(inputPath)
-      .resize(1200, null, {
+      .rotate() // Auto-rotate based on EXIF before resizing/converting
+      .resize(1920, null, {
         withoutEnlargement: true,
         fit: 'inside'
       })
-      .jpeg({
+      .webp({
         quality: 85,
-        progressive: true
-      })
-      .png({
-        quality: 85
+        effort: 4 // Good balance between compression speed and size
       })
       .toFile(output);
 
-    console.log(`✓ Optimized ${relativePath}`);
+    console.log(`✓ Optimized ${webpRelativePath}`);
   } catch (error) {
     console.error(`✗ Error optimizing ${inputPath}:`, error.message);
   }
