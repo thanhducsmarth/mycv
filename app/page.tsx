@@ -254,7 +254,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="columns-1 md:columns-2 gap-8 md:gap-12 space-y-8 md:space-y-12">
+        <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 md:gap-6 space-y-4 md:space-y-6">
           {filteredImages.map((image, index) => (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -366,6 +366,7 @@ export default function Home() {
         close={() => setLightboxOpen(false)}
         slides={filteredImages.map((img) => ({ src: img.src, alt: img.alt }))}
         index={lightboxIndex}
+        on={{ view: ({ index: currentIndex }) => setLightboxIndex(currentIndex) }}
       />
     </div>
   );
