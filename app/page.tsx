@@ -75,9 +75,15 @@ const galleryImages = [
   { id: 3, src: "/images/product/product-03.webp", alt: "Advertising photography", category: "Product" },
   { id: 16, src: "/images/birthday/birthday-01.webp", alt: "Birthday party celebration", category: "Event" },
   { id: 20, src: "/images/event/event-01.webp", alt: "Corporate event crowd gathering", category: "Event" },
+  { id: 100, src: "/images/commercial/DSC09690.webp", alt: "Brand commercial photography", category: "Commercial" },
+  { id: 101, src: "/images/commercial/TTD_11.webp", alt: "Commercial brand shoot", category: "Commercial" },
+  { id: 102, src: "/images/commercial/TTD_12.webp", alt: "Commercial photography", category: "Commercial" },
+  { id: 103, src: "/images/commercial/TTD_15.webp", alt: "Brand photography campaign", category: "Commercial" },
+  { id: 104, src: "/images/commercial/TTD_21.webp", alt: "Professional commercial shoot", category: "Commercial" },
+  { id: 105, src: "/images/commercial/TTD_22.webp", alt: "Brand awareness photography", category: "Commercial" },
 ];
 
-const categories = ["All", "Wedding", "Graduation", "Tet", "Concept", "Studio", "Product", "Event"];
+const categories = ["All", "Commercial", "Wedding", "Graduation", "Tet", "Concept", "Studio", "Product", "Event"];
 
 const heroImages = [
   "/images/hero-background.webp",
