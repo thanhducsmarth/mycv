@@ -5,7 +5,7 @@ import { useState, useEffect, useRef } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
-import { ChevronRight, ArrowRight, Instagram, Facebook, Mail, MapPin } from "lucide-react";
+import { ChevronRight, ArrowRight, Mail, MapPin } from "lucide-react";
 
 // --- Data ---
 const galleryImages = [
